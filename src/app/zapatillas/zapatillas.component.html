@@ -3,7 +3,7 @@
   <ul>
     <li *ngFor="let zapatilla of zapatillas">
         {{zapatilla.marca}} {{zapatilla.modelo}}, color:  {{zapatilla.color}} -
-        {{zapatilla.precio}} €.
+        <span [style.color]="zapatilla.precio < 100 ? 'green': zapatilla.precio > 200 ? 'red': 'black' ">{{zapatilla.precio}} €.</span>
         <ng-container *ngIf="zapatilla.stock; else elseTemplate">
           Disponible
         </ng-container>
