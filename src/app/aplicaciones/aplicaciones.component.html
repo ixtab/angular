@@ -1,0 +1,9 @@
+<h2>{{titulo}}</h2>
+  <ul>
+    <ng-container *ngFor="let aplicacion of aplicaciones; let i=index">
+      <li *ngIf="i != 1">
+        {{aplicacion}}
+      </li>
+    </ng-container>
+  </ul>
+
