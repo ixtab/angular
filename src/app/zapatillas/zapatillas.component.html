@@ -1,3 +1,16 @@
-<p>
-  zapatillas works!
-</p>
+<h2>{{titulo}}</h2>
+<div>
+  <ul>
+    <li *ngFor="let zapatilla of zapatillas">
+        {{zapatilla.marca}} {{zapatilla.modelo}}, color:  {{zapatilla.color}} -
+        {{zapatilla.precio}} €.
+        <ng-container *ngIf="zapatilla.stock; else elseTemplate">
+          Disponible
+        </ng-container>
+        <ng-template #elseTemplate>
+          Sin existencias
+        </ng-template>
+    </li>
+
+  </ul>
+</div>
