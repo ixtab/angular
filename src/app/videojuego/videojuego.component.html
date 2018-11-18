@@ -1,10 +1,17 @@
 <h2>{{titulo}}</h2>
 <p>Añade tu videojuego:</p>
-  <input type="text" [(ngModel)]="mi_videojuego" placeholder="Pon tu videojuego" id="caja_texto"/>
+  <input type="text"
+    [(ngModel)]="mi_videojuego"
+    (blur) = "onBlur()"
+    (keyup.enter) = "anadirVideojuego()"
+    placeholder="Pon tu videojuego"
+    id="caja_texto"
+  >
   <button (click)="anadirVideojuego()">Añadir</button>
 <h3>{{mi_videojuego}}</h3>
 <ul>
   <li *ngFor="let videojuego of videojuegos; let i=index">
-  {{i+1}}.- {{videojuego}}
+  {{i+1}}.- {{videojuego}} -
+  <button class = "borrar" (click)="borrarVideojuego(i)">Borrar</button>
   </li>
 </ul>

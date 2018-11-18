@@ -19,9 +19,18 @@ export class VideojuegoComponent{
     this.mi_videojuego = "";
     console.log("Se ha cargado videojuego.component.ts");
   }
+
   anadirVideojuego(){
     this.videojuegos.push(this.mi_videojuego);
     this.mi_videojuego = "";
     document.getElementById("caja_texto").focus();
+  }
+
+  borrarVideojuego(index: number){
+    this.videojuegos.splice(index, 1);
+  }
+
+  onBlur(){
+    console.log("La caja ha perdido el foco");
   }
 }
