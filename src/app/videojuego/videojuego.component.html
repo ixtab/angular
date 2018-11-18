@@ -1,6 +1,10 @@
 <h2>{{titulo}}</h2>
-  <ul>
-    <li *ngFor="let videojuego of videojuegos; let i=index">
-     {{i+1}}.- {{videojuego}}
-    </li>
-  </ul>
+<p>Añade tu videojuego:</p>
+  <input type="text" [(ngModel)]="mi_videojuego" placeholder="Pon tu videojuego" id="caja_texto"/>
+  <button (click)="anadirVideojuego()">Añadir</button>
+<h3>{{mi_videojuego}}</h3>
+<ul>
+  <li *ngFor="let videojuego of videojuegos; let i=index">
+  {{i+1}}.- {{videojuego}}
+  </li>
+</ul>

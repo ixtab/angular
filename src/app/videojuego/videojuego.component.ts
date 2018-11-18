@@ -11,10 +11,17 @@ export class VideojuegoComponent{
 
   public titulo: string;
   public videojuegos: string[];
+  public mi_videojuego: string;
 
   constructor(){
     this.titulo = "Comoponente de listado de videojuegos";
     this.videojuegos = ["GTA", "Prince of Persia", "Mario Karts", "Sonic"];
+    this.mi_videojuego = "";
     console.log("Se ha cargado videojuego.component.ts");
+  }
+  anadirVideojuego(){
+    this.videojuegos.push(this.mi_videojuego);
+    this.mi_videojuego = "";
+    document.getElementById("caja_texto").focus();
   }
 }

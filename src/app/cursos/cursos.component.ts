@@ -9,10 +9,12 @@ export class CursosComponent implements OnInit, DoCheck, OnDestroy {
 
   public titulo: string;
   public numero: number;
+  public contador: number;
 
   constructor() {
-    this.titulo = "Cursos"
+    this.titulo = "Cursos";
     this.numero = 0;
+    this.contador = 1;
   }
 
   ngOnInit() {
@@ -20,7 +22,12 @@ export class CursosComponent implements OnInit, DoCheck, OnDestroy {
   }
 
   ngDoCheck(){
-    console.log("ngDoCheck se carga cuando hay un cambio en el componente o en la aplicación");
+    console.log(
+      "ngDoCheck se carga cuando hay un cambio en el componente o en la aplicación. Cambio número: "
+      + this.contador
+    );
+    this.contador++;
+
   }
 
   ngOnDestroy(){
