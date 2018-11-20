@@ -1,0 +1,15 @@
+<ul>
+  <li *ngFor="let libro of libros" >
+    <p  [ngClass]="{'
+          noStock': libro.cantidad == 0,
+          caro: libro.precio > 19
+          }"
+        [class.oferta] = "libro.precio < 15"
+    >
+    Título: {{libro.titulo}},
+    autor: {{libro.autor}},
+    precio: {{libro.precio}},
+    pags: {{libro.paginas}}.
+    </p>
+  </li>
+</ul>

@@ -1,0 +1,23 @@
+li {
+  margin: 0;
+  padding: 0;
+
+}
+ul {
+  margin: 0 0 0 400px;
+  padding: 0;
+  text-align: left;
+}
+
+.noStock {
+  text-decoration: line-through;
+}
+
+.caro {
+  color: red;
+}
+
+.oferta {
+  color: darkgreen;
+  font-weight: bold;
+}
