@@ -8,7 +8,7 @@ import { Libro } from '../models/libro';
 })
 export class LibrosComponent implements OnInit {
 
-  public libros = Array<Libro>;
+  public libros: Array<Libro>;
 
   constructor() {
     this.libros = [

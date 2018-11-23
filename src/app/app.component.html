@@ -14,9 +14,25 @@
   </h3>
   <p>{{config_descripcion}}</p>
 </div>
+<nav>
+  <a [routerLink]= "['/']" >Inicio</a>
+  &nbsp;
+  <a [routerLink]= "['/videojuegos']" >Videojuegos</a>
+  &nbsp;
+  <a [routerLink]= "['/libros']" >Libros</a>
+  &nbsp;
+  <a [routerLink]= "['/zapatillas']" >Zapatillas</a>
+  &nbsp;
+  <a [routerLink]= "['/cursos']" >Cursos</a>
+  &nbsp;
+  <a [routerLink]= "['/aplicaciones']" >Aplicaciones</a>
+</nav>
 <hr />
-
 <div style="text-align: center">
+  <router-outlet></router-outlet>
+</div>
+<!--
+
   <libros></libros>
   <hr>
   <videojuego></videojuego>
@@ -30,3 +46,4 @@
   <hr />
   <zapatillas></zapatillas>
 </div>
+-->
