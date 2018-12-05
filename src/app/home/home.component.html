@@ -1,3 +1,31 @@
-<p>
-  home works!
-</p>
+<h1>Página principal</h1>
+
+<!--
+<div *ngIf="!identificado; else ident">
+  <h3>No estás identificado</h3>
+  <p> Pon tu nombre:
+    <input type="text" [(ngModel)]="caja"> &nbsp;
+    <button (click)="identificar()">Enviar</button>
+  </p>
+</div>
+
+<ng-template #ident>
+  <h3>Hola {{nombre}}</h3>
+  <button (click)="salir()">Salir</button>
+</ng-template>
+-->
+
+<div *ngIf="!identificado; then noIdent; else ident"></div>
+
+<ng-template #noIdent>
+  <h3>No estás identificado</h3>
+  <p> Pon tu nombre:
+    <input type="text" [(ngModel)]="caja"> &nbsp;
+    <button (click)="identificar()">Enviar</button>
+  </p>
+</ng-template>
+
+<ng-template #ident>
+  <h3>Hola {{nombre}}</h3>
+  <button (click)="salir()">Salir</button>
+</ng-template>

@@ -7,9 +7,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  public identificado: boolean;
+  public nombre: string;
+  public caja: string;
+  public fuera: boolean;
+
+  constructor() {
+    this.identificado = false;
+    this.nombre = "";
+    this.caja = "";
+   }
 
   ngOnInit() {
+  }
+
+  identificar(){
+    this.identificado = true;
+    this.nombre = this.caja;
+  }
+
+  salir(){
+    this.fuera = confirm(this.nombre + " ¿quieres salir?");
+    if (this.fuera){
+      this.identificado = false;
+      this.caja ="";
+    }
   }
 
 }

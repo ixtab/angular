@@ -1,0 +1,13 @@
+a {
+  text-decoration: none;
+}
+.active{
+  color: black;
+  font-size: 120%;
+  font-weight: bold;
+  text-decoration: underline;
+}
+a:hover {
+  font-size: 120%;
+  color: green;
+}
