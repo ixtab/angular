@@ -11,7 +11,7 @@
 <h3>{{mi_videojuego}}</h3>
 <ul>
   <li *ngFor="let videojuego of videojuegos; let i=index">
-  {{i+1}}.- {{videojuego}} -
+  {{i+1}}.- {{videojuego | titlecase }} -
   <button class = "borrar" (click)="borrarVideojuego(i)">Borrar</button>
   </li>
 </ul>

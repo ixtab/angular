@@ -1,0 +1,22 @@
+{{fecha | date:'h:mm 	a - dd/MM/yyyy - EEEE' | lowercase}}
+<br>
+{{34 | calculadora: 0}}
+<hr>
+
+<input type="text"
+    [(ngModel)]="idUsuario"
+    (keyup.enter) = "obtenerUsuario()"
+    placeholder="usuario"
+    id="caja_texto"
+  >
+<br>
+<br>
+<ng-container *ngIf="usuario; then thenTemplate; else elseTemplate"></ng-container>
+<ng-template #thenTemplate>
+  <img src='{{usuario.avatar}}' alt="foto de usuario" width="200">
+  <br>
+  {{usuario.first_name}} {{usuario.last_name}}
+</ng-template>
+<ng-template #elseTemplate>
+  cargando...
+</ng-template>

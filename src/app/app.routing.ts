@@ -7,6 +7,8 @@ import { VideojuegoComponent } from './videojuego/videojuego.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { AplicacionesComponent } from './aplicaciones/aplicaciones.component';
 import { HomeComponent } from './home/home.component';
+import { ExternoComponent } from './externo/externo.component';
+import { ContactoComponent } from './contacto/contacto.component';
 
 // Array de rutas
 const appRoutes: Routes = [
@@ -18,7 +20,9 @@ const appRoutes: Routes = [
   { path: 'cursos', component: CursosComponent }, // Hay que poner esto también si queremos que nobre sea opcional
   { path: 'cursos/:nombre', component: CursosComponent },
   { path: 'aplicaciones', component: AplicacionesComponent },
-  { path: '**', component: HomeComponent }
+  { path: 'externo', component: ExternoComponent },
+  { path: 'contacto', component: ContactoComponent},
+  { path: '**', component: HomeComponent } // siempre la última.
 ]
 
 export const appRoutingProviders: any[] = [];
