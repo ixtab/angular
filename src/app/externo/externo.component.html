@@ -20,3 +20,28 @@
 <ng-template #elseTemplate>
   cargando...
 </ng-template>
+
+<hr />
+
+<h2>Crear Usuario</h2>
+<form #newUser="ngForm" (ngSubmit)="onSubmit(newUser)">
+  <p>
+    <label for="name">Nombre: </label>
+    <input type="text" id = "name" name="name" #name="ngModel" [(ngModel)]="new_user.name" required>
+    <br>
+    <span *ngIf="name.touched && !name.valid">El nombre no puede estar vacio</span>
+  </p>
+  <p>
+    <label for="job">Trabajo: </label>
+    <input type="text" name="job" #job="ngModel" [(ngModel)]="new_user.job" required>
+    <br>
+    <span *ngIf="job.touched && !job.valid">El Trabajo no puede estar vacio</span>
+  </p>
+  <p>
+    <input type="submit" value="Guardar Usuario" [disabled]="!newUser.form.valid">
+  </p>
+  <div *ngIf="usuario_guardado">
+    <h3>{{usuario_guardado.name}}</h3>
+    <h4>{{usuario_guardado.job}}</h4>
+  </div>
+</form>
